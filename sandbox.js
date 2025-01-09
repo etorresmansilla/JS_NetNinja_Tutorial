@@ -339,5 +339,19 @@ let age = 25;
 //         console.log('not a valid grade');
 //         break;
 // }
-*/
 
+// ! variables and block scope
+// same rules for scope apply to const
+// let age = 30; // global scope
+
+// if(true){
+//     let age =40; // local scope
+//     let name = 'shaun'; // local scope
+//     console.log('inside 1st code block: ', age, name);
+//     if(true){
+//         console.log('inside 2nd code block: ', age); // it will print the closest "upward" version of the variable
+//     }
+// }
+
+// console.log('outside code block: ', age, name);
+*/
