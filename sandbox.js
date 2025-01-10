@@ -354,4 +354,40 @@ let age = 25;
 // }
 
 // console.log('outside code block: ', age, name);
+
+
+// ! functions
+// function declaration
+// function greet(){
+//     console.log('hello there');
+// }
+// // function expression (these are not hoisted)
+// const speak = function(){
+//     console.log('good day!');
+// }; // semicolon because its a function expression
+
+// greet();
+// speak();
+
+// function expression (these are not hoisted)
+// name and time are the parameters, these can have a default value or not
+const speak = function(name = 'luigi', time = 'night'){
+    console.log(`good ${time} ${name}`);
+}; // semicolon because its a function expression
+
+speak('leo', 'morning'); 
+// leo and morning are the arguments, the order matters, same as the parameters
+speak(); 
+// when the function is called with no arguments, it defaults to the ones set in the parameters
 */
+// ! returning values
+
+const calcArea = function(radius){
+    return 3.14 * radius**2
+}
+// return has the function RETURN a value, which we can use
+
+const area = calcArea(5);
+// to be able to use that value we have to store it in a variable
+console.log(area);
+
