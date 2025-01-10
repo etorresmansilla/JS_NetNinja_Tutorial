@@ -470,7 +470,7 @@ people.forEach((person, index) => {
 });
 
 people.forEach(logPerson);
-*/
+
 // ! get a reference to the 'ul'
 
 const ul = document.querySelector('.people');
@@ -486,3 +486,95 @@ people.forEach(person => {
 
 console.log(html);
 ul.innerHTML = html;
+
+
+// ! objects
+
+// object literals
+
+let user = {
+    // key - value pair
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@thenetninja.co.uk',
+    location: 'berlin',
+    blogs: ['why mac & cheese rules', '10 things to make with marmite']
+};
+
+console.log(user);
+console.log(user.name);
+
+user.age = 35;
+
+console.log(user.age);
+
+console.log(user['email']);
+user['name'] = 'chun-li';
+console.log(user['name']);
+
+console.log(typeof user);
+
+
+// ! object literals
+
+let user = {
+    // key - value pair
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@thenetninja.co.uk',
+    location: 'berlin',
+    blogs: ['why mac & cheese rules', '10 things to make with marmite'],
+    login: function(){
+        console.log('the user logged in');
+    },
+    logout: function(){
+        console.log('the user logged out');
+    },
+    logBlogs: function(){
+        console.log('this user has written the following blogs: ');
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        })
+    }
+    // this is a context object
+};
+user.logBlogs();
+user.login();
+user.logout();
+
+const name = 'mario';
+name.toUpperCase();
+
+
+// const blogs = [
+//     {title: 'why mac & cheese rules', likes: 30},
+//     {title: 'ten things to make with marmite',  likes: 50}
+// ];
+// console.log(blogs);
+// shorthand version of the functions inside the object
+let user = {
+    // key - value pair
+    name: 'crystal',
+    age: 30,
+    email: 'crystal@thenetninja.co.uk',
+    location: 'berlin',
+    blogs: [ {title: 'why mac & cheese rules', likes: 30},
+        {title: 'ten things to make with marmite',  likes: 50}],
+    login(){
+        console.log('the user logged in');
+    },
+    logout(){
+        console.log('the user logged out');
+    },
+    logBlogs(){
+        console.log('this user has written the following blogs: ');
+        this.blogs.forEach(blog => {
+            console.log(blog.title, blog.likes);
+        });
+    }
+    // this is a context object
+};
+user.logBlogs();
+user.login();
+user.logout();
+*/
