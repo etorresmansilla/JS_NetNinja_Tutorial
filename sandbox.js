@@ -379,7 +379,7 @@ speak('leo', 'morning');
 // leo and morning are the arguments, the order matters, same as the parameters
 speak(); 
 // when the function is called with no arguments, it defaults to the ones set in the parameters
-*/
+
 // ! returning values
 
 const calcArea = function(radius){
@@ -391,3 +391,57 @@ const area = calcArea(5);
 // to be able to use that value we have to store it in a variable
 console.log(area);
 
+
+// ! arrow functions
+// const calcArea = (radius) => {
+//     return 3.14 * radius**2;
+// }
+const calcArea = radius =>  3.14 * radius**2;
+// simplified way of expressing the arrow function, one parameter
+const area = calcArea(5);
+console.log(area);
+
+
+// const greet = function(){
+//     return 'hello world';
+// }
+
+const greet = () => 'hello world';
+const result = greet();
+console.log(result);
+
+// const bill =  function(products, tax){
+//     let total = 0;
+//     for(let i = 0; i < products.length; i++){
+//         total += products[i] + products [i] * tax;
+//     }
+//     return total;
+// }
+
+const bill = (products, tax) => {
+    let total = 0;
+    for(let i = 0; i < products.length; i++){
+        total += products[i] + products [i] * tax;
+}
+return total;
+};
+
+console.log(bill([10,15,30], 0.2));
+
+
+
+// ! functions and methods
+const name = 'shaun';
+// functions
+
+const greet = () => 'hello';
+
+let resultOne = greet();
+console.log(resultOne);
+
+// methods
+
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);
+
+*/
