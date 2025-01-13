@@ -617,8 +617,56 @@ console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
 
 // console.log(userOne, userTwo);
 
-*/
+
 
 // ! interacting with a browser (DOM)
 
 // querying the DOM
+// const para = document.querySelector('body > div:nth-child(2) > p:nth-child(2)'); // this will grab the first <p></p> tag
+// console.log(para);
+
+const paras = document.querySelectorAll('p');
+paras.forEach(para => {
+    console.log(para);
+})
+const errors = document.querySelectorAll('.error');
+console.log(paras);
+console.log(paras[2]);
+console.log(errors);
+
+
+// get an element by ID
+title = document.getElementById('page-title');
+
+// get elements by their class name
+const errors = document.getElementsByClassName('error');
+console.log(errors);
+
+// get elements by their tag name
+const paras = document.getElementsByTagName('p');
+
+console.log('paras');
+
+
+
+const para = document.querySelector('p');
+// console.log(para.innerText);
+// para.innerText = 'ninjas are awesome!';
+
+const paras = document.querySelectorAll('p');
+// paras.forEach(para => {
+//     console.log(para.innerText);
+//     para.innerText += ' new text';
+// });
+
+const content = document.querySelector('.content');
+
+// console.log(content.innerHTML);
+// content.innerHTML = '<h2>This is a new h2</h2>'
+
+const people = ['mario', 'luigi', 'yoshi'];
+
+people.forEach(person => {
+    content.innerHTML += `<p>${person}</p>`;
+})
+*/
