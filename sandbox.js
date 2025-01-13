@@ -599,6 +599,26 @@ const random = Math.random();
 
 console.log(random);
 console.log(Math.round(random * 100));
-*/
+
 
 // ! primitive types & reference types
+
+// primitive values
+
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+// reference values
+
+// userOne = { name: 'ryu', age: 30};
+// userTwo = userOne;
+
+// console.log(userOne, userTwo);
+
+*/
+
+// ! interacting with a browser (DOM)
+
+// querying the DOM
